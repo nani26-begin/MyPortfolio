@@ -37,129 +37,130 @@
   "experience": [
     {
       "id": 1,
-      "role": "Control-M Staff Technical Analyst",
-      "company": "BMC Software Asia Pacific Pte Ltd",
-      "companyShort": "BMC SOFTWARE",
-      "type": "Full-time",
-      "location": "Singapore",
-      "period": "Nov 2022",
+      "role": "Python Programmer & AI Intern",
+      "company": "Mastishka Information Technologies Pvt. Ltd.",
+      "companyShort": "MASTISHKA INFO TECH",
+      "type": "Internship",
+      "location": "Remote, India",
+      "period": "Jan 2026",
       "periodEnd": "Present",
       "bullets": [
-        "Provide Level 2 and Level 3 technical support for Control-M across enterprise Linux, Unix, and Windows environments.",
-        "Advise global customers on Control-M architecture, workload optimization, upgrades, migrations, compatibility, and operational best practices.",
-        "Perform RCA, reproduce customer issues in lab environments, validate fixes, manage escalations to R&D, and publish knowledge articles and videos.",
-        "Built AI-powered Control-M Log Analyzer and Salesforce case follow-up automation to reduce manual investigation and improve support response time."
+        "Develop and maintain application features using Python, automation frameworks, and modern software patterns.",
+        "Perform manual and automated testing to ensure product reliability and identify bugs or performance bottlenecks.",
+        "Collaborate on AI integration workflows and test script creation to streamline software delivery."
       ],
-      "desc": "Enterprise Control-M technical support, architecture advisory, RCA, escalation management, upgrade planning, and AI-assisted automation for global customers.",
-      "tech": ["Control-M", "Linux", "Unix", "Windows", "Python", "OpenAI API", "React", "Node.js", "ITSM"]
+      "desc": "Application development, automation scripting, manual testing, and AI workflow integration.",
+      "tech": ["Python", "Automation", "Testing", "AI Integration"]
     },
     {
       "id": 2,
-      "role": "Control-M Analyst",
-      "company": "United Overseas Bank (UOB)",
-      "companyShort": "UOB",
-      "type": "Full-time",
-      "location": "Singapore",
-      "period": "Aug 2021",
-      "periodEnd": "Nov 2022",
+      "role": "LLM Agent Trainee",
+      "company": "Ethara AI",
+      "companyShort": "ETHARA AI",
+      "type": "Trainee",
+      "location": "Remote, India",
+      "period": "Jan 2026",
+      "periodEnd": "May 2026",
       "bullets": [
-        "Supported Operations & Technology Control-M administration, scheduling, production support, and batch workflow management.",
-        "Automated manual activities using VB scripting, VBA macros, batch scripts, Unix shell scripts, and SQL to improve operational efficiency.",
-        "Implemented LDAP authentication for Control-M access and supported upgrades, migrations, HA setup, DR checks, and production changes.",
-        "Handled incidents, problems, and changes through Remedy, Jira, and ServiceNow while coordinating with application, infrastructure, and business teams."
+        "Trained and evaluated LLM agents on reasoning, dialogue logic, and specific system prompts.",
+        "Optimized prompt design and dialogue structures to improve agent response accuracy and user engagement.",
+        "Participated in testing and refining AI agent behaviors for conversational deployment."
       ],
-      "desc": "Control-M SME support for banking operations, automation, access management, batch execution, DR verification, and ITIL-aligned service delivery.",
-      "tech": ["Control-M", "Unix", "Shell", "VBA", "SQL", "Remedy", "Jira", "ServiceNow", "AIX"]
+      "desc": "LLM agent behavior training, prompt engineering, dialogue testing, and conversational AI optimization.",
+      "tech": ["LLM", "AI Agents", "Prompt Engineering", "Conversational AI"]
     },
     {
       "id": 3,
-      "role": "RPA Consultant & Business Analyst",
-      "company": "ABeam Consulting (OCBC Bank)",
-      "companyShort": "ABEAM / OCBC",
-      "type": "Consulting",
-      "location": "Singapore",
-      "period": "Jun 2019",
-      "periodEnd": "Mar 2020",
+      "role": "Java Developer Intern",
+      "company": "Java Programming and Development",
+      "companyShort": "JAVA DEV",
+      "type": "Internship",
+      "location": "Bengaluru, India",
+      "period": "Jan 2025",
+      "periodEnd": "Aug 2025",
       "bullets": [
-        "Delivered end-to-end UiPath automation solutions for banking operations, reducing manual processing across multiple business processes.",
-        "Gathered requirements with stakeholders and authored BRD, PDD, and SDD documentation for automation delivery.",
-        "Designed workflows with exception handling, screen scraping, data scraping, CSV/Excel outputs, and reliable bot scheduling through UiPath Orchestrator."
+        "Designed and implemented backend business logic and server-side applications using Java.",
+        "Optimized database connections and SQL query performance for server operations.",
+        "Assisted in building REST APIs and testing backend endpoints for modular integration."
       ],
-      "desc": "RPA delivery and business analysis for card operations, billing, merchant payment processes, and production automation workflows.",
-      "tech": ["UiPath", "RPA", "BRD", "PDD", "SDD", "Excel", "Automation", "Banking"]
-    },
-    {
-      "id": 4,
-      "role": "Control-M Analyst",
-      "company": "Bank of Singapore",
-      "companyShort": "BOS",
-      "type": "Full-time",
-      "location": "Singapore",
-      "period": "May 2018",
-      "periodEnd": "Apr 2019",
-      "bullets": [
-        "Provided end-to-end production support for Control-M failures, workflow development, server management, environment changes, and upgrades.",
-        "Managed Control-M/EM components, agents, calendars, dependencies, post-processing alerts, urgent changes, and weekend implementation roadmaps.",
-        "Worked with teams on RCA, proactive batch cycle analysis, SLA adherence, and production incident reduction across Unix, Windows, and T24 workflows."
-      ],
-      "desc": "Production support and Control-M administration for banking operations, change delivery, workflow design, and incident resolution.",
-      "tech": ["Control-M", "Unix", "Windows", "T24", "RCA", "SLA", "Change Management"]
+      "desc": "Backend and server-side application development using Java, database management, and API design.",
+      "tech": ["Java", "SQL", "Backend", "REST API", "Database"]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Log Analyzer",
-      "subtitle": "AI-Powered RCA Assistant",
-      "type": "Agentic AI",
-      "link": "https://ctm-log-analyzer.netlify.app/",
+      "title": "GoTogether",
+      "subtitle": "Travel Coordination App",
+      "type": "MERN & SQL",
+      "link": "https://github.com/nani26-begin",
       "image": "/assets/project-artgenio1.png",
-      "tech": ["React", "Node.js", "OpenAI API", "Prompt Engineering", "Control-M", "Log Analysis"],
-      "desc": "Designed and developed an LLM-powered support tool that analyzes Control-M logs, extracts structured insights from unstructured data, and surfaces probable root causes with actionable troubleshooting steps."
+      "tech": ["Java", "Node.js", "React.js", "MySQL"],
+      "desc": "Designed a travel coordination and car-pooling platform to help users connect with others traveling to the same destination during urgent situations when ticketing options are unavailable."
     },
     {
       "id": 2,
-      "title": "Case Follow-Up Automation",
-      "subtitle": "AI-Driven Support Workflow",
-      "type": "Automation",
-      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/",
+      "title": "AI Agent Bot",
+      "subtitle": "Conversational Practice Assistant",
+      "type": "AI Agent",
+      "link": "https://github.com/nani26-begin",
       "image": "/assets/project-easyfolio1.png",
-      "tech": ["Python", "Salesforce", "SMTP", "AI Automation", "SLA", "Support Ops"],
-      "desc": "Built a Python-based automation system to monitor support cases and trigger intelligent follow-up emails, improving response time, reducing manual effort, and strengthening SLA compliance."
+      "tech": ["Node.js", "React.js", "Artificial Intelligence", "NLP"],
+      "desc": "Developed an AI-based conversational agent bot during an internship, designed to help users practice and improve their conversational and communication skills."
+    },
+    {
+      "id": 3,
+      "title": "Eye-Controlled Laptop",
+      "subtitle": "Computer Vision Gaze Control",
+      "type": "Computer Vision",
+      "link": "https://github.com/nani26-begin",
+      "image": "/assets/project-artgenio1.png",
+      "tech": ["Python", "OpenCV", "MediaPipe"],
+      "desc": "Developed a real-time computer vision system allowing hands-free control of laptop interfaces using eye tracking and gaze detection algorithms."
+    },
+    {
+      "id": 4,
+      "title": "AI Resume Analyzer",
+      "subtitle": "NLP Parsing & Evaluation",
+      "type": "NLP & ML",
+      "link": "https://github.com/nani26-begin",
+      "image": "/assets/project-easyfolio1.png",
+      "tech": ["Python", "NLP", "Machine Learning"],
+      "desc": "Built an AI-powered resume parsing and analysis system that automatically extracts key information from uploaded PDF resumes and evaluates their skills alignment."
     }
   ],
   "publications": [
     {
       "id": 1,
-      "title": "Control-M Log Analyzer",
-      "platform": "Live Demo",
+      "title": "AI Training and Evaluation",
+      "platform": "Outlier.ai",
       "year": "2026",
-      "link": "https://ctm-log-analyzer.netlify.app/",
-      "desc": "An AI-powered log analysis prototype for Control-M support, using LLM workflows to detect likely root causes and generate troubleshooting guidance."
+      "link": "https://outlier.ai",
+      "desc": "Evaluated and optimized AI-generated responses using structured feedback and data validation techniques."
     },
     {
       "id": 2,
-      "title": "AI-Driven Salesforce Case Follow-Up",
-      "platform": "LinkedIn",
-      "year": "2026",
-      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/",
-      "desc": "A support automation concept using Python and AI-assisted monitoring to improve follow-up discipline, response speed, and SLA adherence."
+      "title": "Technical Support Training",
+      "platform": "South Central Railway",
+      "year": "2024",
+      "link": "https://scr.indianrailways.gov.in",
+      "desc": "Practical experience in railway signaling, electronics systems, control systems, and field equipment maintenance."
     },
     {
       "id": 3,
-      "title": "Enterprise Control-M Advisory",
-      "platform": "Practice Area",
+      "title": "B.Tech in Data Science",
+      "platform": "Bapatla Engineering College",
       "year": "2026",
       "link": "mailto:kakumanuajitbabu@gmail.com",
-      "desc": "Architecture, sizing, upgrade planning, migration support, compatibility guidance, RCA, and runbook validation for Control-M environments."
+      "desc": "Advanced data science, machine learning, deep learning, databases, and AI systems curriculum."
     },
     {
       "id": 4,
-      "title": "RPA & Process Documentation",
-      "platform": "Practice Area",
-      "year": "2026",
+      "title": "Diploma in ECE",
+      "platform": "BPTC Bapatla",
+      "year": "2023",
       "link": "mailto:kakumanuajitbabu@gmail.com",
-      "desc": "Business analysis, PDD and SDD creation, UiPath workflow delivery, and production-ready automation design for banking operations."
+      "desc": "Electronics and communication engineering, microprocessors, digital electronics, and signaling."
     }
   ],
   "socials": [
