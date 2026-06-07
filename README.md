@@ -1,6 +1,6 @@
-# Jyoti Sinha Cinematic Portfolio
+# Kakumanu Ajit Babu Cinematic Portfolio
 
-A customized cinematic Next.js portfolio for Jyoti Sinha, focused on Control-M expertise, production support, enterprise automation, RPA, and AI-assisted support projects.
+A customized cinematic Next.js portfolio for Kakumanu Ajit Babu, focused on Control-M expertise, production support, enterprise automation, RPA, and AI-assisted support projects.
 
 ## Run locally
 

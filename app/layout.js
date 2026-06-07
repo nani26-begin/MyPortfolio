@@ -32,12 +32,12 @@ const description =
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Jyoti Sinha | Software Engineer',
-    template: '%s | Jyoti Sinha',
+    default: 'Kakumanu Ajit Babu | Software Engineer',
+    template: '%s | Kakumanu Ajit Babu',
   },
   description,
   keywords: [
-    'Jyoti Sinha',
+    'Kakumanu Ajit Babu',
     'Control-M SME',
     'Control-M Administrator',
     'Production Support',
@@ -48,27 +48,27 @@ export const metadata = {
     'UiPath RPA',
     'Singapore',
   ],
-  authors: [{ name: 'Jyoti Sinha', url: SITE_URL }],
-  creator: 'Jyoti Sinha',
+  authors: [{ name: 'Kakumanu Ajit Babu', url: SITE_URL }],
+  creator: 'Kakumanu Ajit Babu',
   openGraph: {
     type: 'website',
     locale: 'en_SG',
     url: SITE_URL,
-    siteName: 'Jyoti Sinha',
-    title: 'Jyoti Sinha | Control-M SME',
+    siteName: 'Kakumanu Ajit Babu',
+    title: 'Kakumanu Ajit Babu | Control-M SME',
     description,
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Jyoti Sinha | Control-M SME Portfolio',
+        alt: 'Kakumanu Ajit Babu | Control-M SME Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jyoti Sinha | Control-M SME',
+    title: 'Kakumanu Ajit Babu | Control-M SME',
     description,
     images: ['/opengraph-image'],
   },
@@ -117,9 +117,9 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              name: 'Jyoti Sinha',
+              name: 'Kakumanu Ajit Babu',
               url: SITE_URL,
-              email: 'jyotisinha0526@gmail.com',
+              email: 'kakumanuajitbabu@gmail.com',
               jobTitle: 'Control-M SME',
               sameAs: [
                 'https://ctm-log-analyzer.netlify.app/',

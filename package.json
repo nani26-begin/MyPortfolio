@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "Jyoti Sinha",
-    "email": "jyotisinha0526@gmail.com",
-    "url": "https://ctm-log-analyzer.netlify.app/"
+    "name": "Kakumanu Ajit Babu",
+    "email": "kakumanuajitbabu@gmail.com",
+    "url": "https://nani26-begin.github.io/MyPortfolio"
   },
   "scripts": {
     "dev": "next dev",

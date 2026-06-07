@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'Jyoti Sinha | Software Engineer'
+export const alt = 'Kakumanu Ajit Babu | Software Engineer'
 
 export const size = {
   width: 1200,
@@ -100,7 +100,7 @@ export default function Image() {
                 letterSpacing: -4,
               }}
             >
-              JYOTI
+              AJIT BABU
             </span>
 
             <span
@@ -111,7 +111,7 @@ export default function Image() {
                 letterSpacing: -4,
               }}
             >
-              SINHA
+              KAKUMANU
             </span>
           </div>
 
@@ -222,7 +222,7 @@ export default function Image() {
             src={photoUrl}
             width={420}
             height={630}
-            alt="Jyoti Sinha"
+            alt="Kakumanu Ajit Babu"
             style={{
               objectFit: 'cover',
             }}
@@ -250,7 +250,7 @@ export default function Image() {
             letterSpacing: 2,
           }}
         >
-          jyoti-sinha-portfolio.vercel.app
+          nani26-begin.github.io/MyPortfolio
         </div>
       </div>
     ),
