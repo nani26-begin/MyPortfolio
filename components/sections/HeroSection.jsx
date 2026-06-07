@@ -1,14 +1,14 @@
 'use client'
 
-import { useEffect, useRef, Fragment } from 'react'
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FaGithub, FaLinkedinIn, FaInstagram, FaPython } from 'react-icons/fa'
+import { FiArrowUpRight, FiCode, FiCpu, FiBarChart2 } from 'react-icons/fi'
+import { SiFlutter, SiDart, SiTensorflow, SiFirebase, SiMysql, SiGit } from 'react-icons/si'
 import { gsap } from '@/lib/gsap'
 
 import profile from '@/data/profile.json'
-import content from '@/data/content.json'
 import styles from '@/styles/sections/HeroSection.module.css'
 
 const HeroBackground = dynamic(() => import('@/components/three/HeroBackground'), { ssr: false })
@@ -16,31 +16,41 @@ const HeroBackground = dynamic(() => import('@/components/three/HeroBackground')
 const SOCIAL_ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Instagram: FaInstagram }
 const SIDEBAR_LABELS  = ['Instagram', 'GitHub', 'LinkedIn']
 
-function splitTagline(text, highlight) {
-  if (!highlight) return [text]
-  const parts = text.split(highlight)
-  return parts.reduce((acc, part, i) => {
-    acc.push(part)
-    if (i < parts.length - 1) {
-      acc.push(<span key={i} className={styles.taglineAccent}>{highlight}</span>)
-    }
-    return acc
-  }, [])
-}
+const SERVICES = [
+  {
+    title: "Flutter Development",
+    desc: "Building cross-platform mobile apps with clean UI & smooth performance.",
+    icon: FiCode
+  },
+  {
+    title: "AI & Machine Learning",
+    desc: "Exploring intelligent models and real-world AI applications.",
+    icon: FiCpu
+  },
+  {
+    title: "Data Science",
+    desc: "Turning data into insights and actionable business value.",
+    icon: FiBarChart2
+  }
+]
+
+const TECH_ITEMS = [
+  { name: "Flutter", icon: SiFlutter },
+  { name: "Dart", icon: SiDart },
+  { name: "Python", icon: FaPython },
+  { name: "TensorFlow", icon: SiTensorflow },
+  { name: "Firebase", icon: SiFirebase },
+  { name: "MySQL", icon: SiMysql },
+  { name: "Git", icon: SiGit }
+]
 
 export default function HeroSection() {
-  const sectionRef     = useRef(null)
-  const greetRef       = useRef(null)
-  const roleRef        = useRef(null)
-  const firstName      = useRef(null)
-  const lastName       = useRef(null)
-  const photoRef       = useRef(null)
-  const pillsRef       = useRef(null)
-  const ctaBtnRef      = useRef(null)
-  const statsRef       = useRef(null)
-  const taglineCardRef = useRef(null)
-  const availCardRef   = useRef(null)
-  const socialRef      = useRef(null)
+  const sectionRef   = useRef(null)
+  const leftColRef   = useRef(null)
+  const centerColRef = useRef(null)
+  const photoRef     = useRef(null)
+  const techBarRef   = useRef(null)
+  const socialRef    = useRef(null)
 
   function handleViewProjects() {
     const scroller = document.querySelector('main')
@@ -53,35 +63,27 @@ export default function HeroSection() {
     const section = sectionRef.current
     if (!section) return
 
-    const fadeY = [
-      greetRef.current, roleRef.current,
-      firstName.current, lastName.current,
-      pillsRef.current, ctaBtnRef.current, statsRef.current,
-    ].filter(Boolean)
+    // Elements to animate
+    const leftItems = leftColRef.current?.children ? Array.from(leftColRef.current.children) : []
+    const serviceCards = centerColRef.current?.children ? Array.from(centerColRef.current.children) : []
+    const techItems = techBarRef.current ? [techBarRef.current] : []
 
-    const fadeX = [taglineCardRef.current, availCardRef.current].filter(Boolean)
-
-    gsap.set(fadeY, { opacity: 0, y: 30 })
-    gsap.set(fadeX, { opacity: 0, x: 20 })
-    if (photoRef.current)  gsap.set(photoRef.current,  { opacity: 0, x: 80 })
+    gsap.set(leftItems, { opacity: 0, y: 30 })
+    gsap.set(serviceCards, { opacity: 0, x: 50 })
+    if (photoRef.current) gsap.set(photoRef.current, { opacity: 0, scale: 0.95 })
     if (socialRef.current) gsap.set(socialRef.current, { opacity: 0, x: -20 })
+    if (techBarRef.current) gsap.set(techBarRef.current, { opacity: 0, y: 20 })
 
     const tl = gsap.timeline({ paused: true })
-    tl.to(greetRef.current,       { opacity: 1, y: 0, duration: 0.5,  ease: 'power2.out' })
-      .to(roleRef.current,        { opacity: 1, y: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.3')
-      .to(firstName.current,      { opacity: 1, y: 0, duration: 0.6,  ease: 'power2.out' }, '-=0.2')
-      .to(lastName.current,       { opacity: 1, y: 0, duration: 0.6,  ease: 'power2.out' }, '-=0.4')
-      .to(photoRef.current,       { opacity: 1, x: 0, duration: 0.7,  ease: 'power2.out' }, '-=0.5')
-      .to(pillsRef.current,       { opacity: 1, y: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.3')
-      .to(ctaBtnRef.current,      { opacity: 1, y: 0, duration: 0.4,  ease: 'power2.out' }, '-=0.2')
-      .to(statsRef.current,       { opacity: 1, y: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.2')
-      .to(taglineCardRef.current, { opacity: 1, x: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.5')
-      .to(availCardRef.current,   { opacity: 1, x: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.3')
-      .to(socialRef.current,      { opacity: 1, x: 0, duration: 0.5,  ease: 'power2.out' }, '-=0.4')
+    tl.to(socialRef.current, { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out' })
+      .to(leftItems, { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' }, '-=0.3')
+      .to(photoRef.current, { opacity: 1, scale: 1, duration: 0.8, ease: 'power2.out' }, '-=0.6')
+      .to(serviceCards, { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: 'power2.out' }, '-=0.5')
+      .to(techItems, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3')
 
     const observer = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) { tl.play(); observer.disconnect() } },
-      { threshold: 0.3 },
+      { threshold: 0.2 },
     )
     observer.observe(section)
     return () => { observer.disconnect(); tl.kill() }
@@ -93,18 +95,11 @@ export default function HeroSection() {
 
   return (
     <section ref={sectionRef} className={styles.section}>
-
       <HeroBackground />
-
-      {/* Photo */}
-      <div ref={photoRef} className={styles.photo}>
-        <Image
-          src="/assets/hero1.png" alt={profile.name.full}
-          fill priority quality={100}
-          sizes="(min-width: 768px) 55vw, 100vw"
-          className={styles.photoImg}
-        />
-      </div>
+      
+      {/* Decorative Glows */}
+      <div className={styles.glow} />
+      <div className={styles.photoGlow} />
 
       {/* Social Sidebar */}
       <div ref={socialRef} className={styles.socialSidebar}>
@@ -134,69 +129,83 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Left Content Column */}
-      <div className={styles.content}>
+      {/* Main Grid Layout */}
+      <div className={styles.container}>
+        
+        {/* Left Column: Greeting, Name, Description, CTA, Stats */}
+        <div ref={leftColRef} className={styles.leftCol}>
+          <div className={styles.greeting}>
+            <span className={styles.greetText}>Hi, I'm</span>
+            <span className={styles.roleText}>{profile.roles.short}</span>
+          </div>
 
-        {/* Greeting */}
-        <div className={styles.greeting}>
-          <p ref={greetRef} className={styles.greetText}>{"Hi, I'm"}</p>
-          <p ref={roleRef}  className={styles.roleText}>{profile.roles.short}</p>
+          <h1 className={styles.name}>{profile.name.first}</h1>
+
+          <p className={styles.tagline}>{profile.tagline}</p>
+
+          <button type="button" className={styles.viewBtn} onClick={handleViewProjects}>
+            View My Work <FiArrowUpRight />
+          </button>
+
+          <div className={styles.stats}>
+            {profile.stats.map(s => (
+              <div key={s.label} className={styles.statCard}>
+                <span className={styles.statValue}>{s.value}</span>
+                <span className={styles.statLabel}>{s.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Stacked Name */}
-        <div className={styles.nameBlock}>
-          <p ref={firstName} className={styles.name}>{profile.name.first}</p>
-          <p ref={lastName}  className={styles.name}>{profile.name.last}</p>
+        {/* Center Column: Services Stack */}
+        <div ref={centerColRef} className={styles.centerCol}>
+          {SERVICES.map((s, idx) => {
+            const Icon = s.icon
+            return (
+              <div key={idx} className={styles.serviceCard}>
+                <div className={styles.serviceIconContainer}>
+                  <Icon className={styles.serviceIcon} />
+                </div>
+                <div className={styles.serviceText}>
+                  <h3 className={styles.serviceTitle}>{s.title}</h3>
+                  <p className={styles.serviceDesc}>{s.desc}</p>
+                </div>
+              </div>
+            )
+          })}
         </div>
 
-        {/* Tag Pills */}
-        <div ref={pillsRef} className={styles.pills}>
-          {content.hero.pills.map((tag, i) => (
-            <Fragment key={tag}>
-              <span className={styles.pill}>{tag}</span>
-              {i < content.hero.pills.length - 1 && (
-                <span className={styles.pillDot} aria-hidden="true" />
-              )}
-            </Fragment>
-          ))}
-        </div>
-
-        {/* View Projects CTA */}
-        <button ref={ctaBtnRef} type="button" className={styles.viewBtn} onClick={handleViewProjects}>
-           View Work <FiArrowUpRight />
-        </button>
-
-        {/* Stats Row */}
-        <div ref={statsRef} className={styles.stats}>
-          {[...profile.stats.slice(0, 2), content.hero.specialistStat].map(s => (
-            <div key={s.label} className={styles.statCard}>
-              <span className={styles.statValue}>{s.value}</span>
-              <span className={styles.statLabel}>{s.label}</span>
-            </div>
-          ))}
+        {/* Right Column: Profile Image */}
+        <div ref={photoRef} className={styles.photoContainer}>
+          <div className={styles.photoWrapper}>
+            <Image
+              src="/assets/ajit-hero.png"
+              alt={profile.name.full}
+              fill
+              priority
+              quality={100}
+              sizes="(min-width: 1024px) 35vw, 100vw"
+              className={styles.photoImg}
+            />
+          </div>
         </div>
 
       </div>
 
-      {/* Tagline + Availability Cards */}
-      <div className={styles.cardsCol}>
-        <div ref={taglineCardRef} className={styles.taglineCard}>
-          <p className={styles.taglineText}>
-            {splitTagline(profile.tagline, content.hero.taglineHighlight)}
-          </p>
-          <p className={styles.freelanceNote}>{content.hero.freelanceNote}</p>
+      {/* Bottom Row: Tech Stack Bar */}
+      <div ref={techBarRef} className={styles.techStackBar}>
+        <span className={styles.techStackLabel}>Tech Stack &gt;</span>
+        <div className={styles.techIcons}>
+          {TECH_ITEMS.map((t, idx) => {
+            const Icon = t.icon
+            return (
+              <div key={idx} className={styles.techItem}>
+                <Icon className={styles.techIcon} />
+                <span>{t.name}</span>
+              </div>
+            )
+          })}
         </div>
-
-        {profile.available && (
-          <div ref={availCardRef} className={styles.availCard}>
-            <div className={styles.availHeader}>
-              <span className={styles.availDot} />
-              <span className={styles.availStatus}>{content.hero.availableLabel}</span>
-            </div>
-            <p className={styles.locationLine}>Based in {profile.location.based}</p>
-            <p className={styles.locationLine}>Available {profile.location.availability}</p>
-          </div>
-        )}
       </div>
 
     </section>

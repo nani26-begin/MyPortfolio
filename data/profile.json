@@ -5,40 +5,34 @@
     "full": "Kakumanu Ajit Babu"
   },
   "email": "kakumanuajitbabu@gmail.com",
-  "tagline": "Designing reliable Control-M operations, automation, and AI-assisted support systems.",
-  "description": "Control-M SME and production support specialist with 15+ years across banking, enterprise workload automation, ITSM, RPA, and AI-assisted operations.",
+  "tagline": "Building intelligent apps with Flutter, AI/ML, and modern technologies that create real impact.",
+  "description": "Software Developer and B.Tech Data Science Graduate specializing in Flutter, AI/ML, and modern web applications.",
   "roles": {
-    "short": "Software Engineer",
-    "detailed": "Control-M SME | Production L3 Support | Agentic AI Automation"
+    "short": "Software Developer & Data Science Graduate",
+    "detailed": "Flutter Developer | AI & Machine Learning | Data Science"
   },
   "location": {
-    "based": "Singapore",
-    "availability": "Singapore / Remote"
+    "based": "India",
+    "availability": "India / Remote"
   },
   "available": true,
-  "bio": "IT professional with 15+ years of experience in Control-M administration, batch workflow design, production support, infrastructure management, automation, and ITIL-led service delivery. Currently supporting enterprise Control-M customers at BMC Software, with deep experience across banking environments, Unix/Linux and Windows platforms, shell scripting, Python, SQL, VBA, UiPath RPA, REST APIs, and AI-assisted support tooling.",
+  "bio": "Software Developer and B.Tech Data Science Graduate dedicated to building high-performance, aesthetically pleasing mobile and web applications with cutting-edge technologies. Experienced in Flutter cross-platform development, AI/ML modeling, and data-driven insights.",
   "stats": [
-    { "value": "15+", "label": "Years Experience" },
-    { "value": "8+", "label": "Enterprise Roles" },
-    { "value": "2", "label": "AI Automation Projects" }
+    { "value": "15+", "label": "Projects Completed" },
+    { "value": "3+", "label": "Years Learning" },
+    { "value": "B.Tech", "label": "Data Science Graduate" }
   ],
   "skills": [
-    "Control-M SME",
-    "L2/L3 Support",
-    "Batch Scheduling",
-    "Production Support",
-    "Agentic AI",
-    "Automation",
-    "Unix/Linux",
-    "Shell Scripting",
+    "Flutter",
+    "Dart",
     "Python",
-    "SQL",
-    "UiPath RPA",
-    "ITIL",
-    "ServiceNow",
-    "Jira",
-    "RCA",
-    "REST API"
+    "TensorFlow",
+    "Firebase",
+    "MySQL",
+    "Git",
+    "React",
+    "Node.js",
+    "C++"
   ],
   "experience": [
     {
